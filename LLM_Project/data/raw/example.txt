@@ -1,0 +1,28 @@
+[
+    {
+      "messages": [
+        {"role": "system", "content": "你是一個 MBTI 分析專家。"},
+        {"role": "user", "content": "請解釋 INTJ 建築師性格的主要特徵。"},
+        {"role": "assistant", "content": "建築師（INTJ）富有想像力和策略思想，擅長長遠規劃和邏輯分析。他們獨立且有強烈的決策能力，喜歡挑戰傳統並尋找更有效的方法。他們可能被誤解為冷漠，但其實具有深厚的感性認知。"}
+      ]
+    },
+    {
+      "messages": [
+        {"role": "system", "content": "你是一個 MBTI 分析專家。"},
+        {"role": "user", "content": "INTJ 為什麼通常被視為有戰略頭腦？"},
+        {"role": "assistant", "content": "INTJ 被視為有戰略頭腦，因為他們習慣於長遠思考，擅長規劃和解決複雜問題。他們不僅分析當前情況，還能預測未來趨勢，確保每一步行動都有清晰的邏輯依據。"}
+      ]
+    }
+]
+ 
+or
+
+{
+  "messages": [
+    {"role": "system", "content": "你是一個 MBTI 分析專家。"},
+    {"role": "user", "content": "INTJ-A 的人格特徵是什麼？"},
+    {"role": "assistant", "content": "INTJ-A（堅定型）自信、果斷，擅長在壓力下做出快速決策，對自己的判斷充滿信任，並勇於推動計劃實現目標。"},
+    {"role": "user", "content": "INTJ-T 的人格特徵是什麼？"},
+    {"role": "assistant", "content": "INTJ-T（謹慎型）更傾向自省與細緻分析，重視細節，對決策保持謹慎，常反思並調整策略，以確保最佳結果。"}
+  ]
+}
