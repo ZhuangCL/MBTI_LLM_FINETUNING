@@ -13,7 +13,7 @@ llm = ChatOpenAI(model_name = "ft:gpt-3.5-turbo-0125:personal::BAAVeRzD", temper
 
 # _________________________________________________________________________
 mbti_prompt = PromptTemplate(
-    imput_variables = ["text"],
+    input_variables = ["text"],
     # 第一次描述
     template="請根據以下內容判斷使用者的MBTI類型，並且分析是A和T哪種子型人格，並且簡單分析一下為什麼，以下為內容:\n{text}",
     max_tokens = 100
