@@ -26,9 +26,14 @@ def log_fine_tuning(message):
 
 # 1️⃣ 讀取訓練數據
 def load_training_data(file_path):
+    print("📂 檢查訓練資料格式中...")
     with open(file_path, "r", encoding="utf-8") as f:
-        # 確保 JSONL 格式正確解析
-        return [json.loads(line) for line in tqdm(f, desc="讀取訓練資料")] 
+        for i, line in enumerate(tqdm(f, desc="驗證 JSONL")):
+            try:
+                json.loads(line)
+            except json.JSONDecodeError as e:
+                raise ValueError(f"❌ 第 {i+1} 行格式錯誤: {e}")
+    print("✅ 訓練資料格式正確！")
     
 # 2️⃣ 上傳數據並建立 Fine-tuning 任務
 def upload_training_data():
@@ -103,7 +108,7 @@ if __name__ == "__main__":
         print("🔵 Fine-tuning 訓練開始...") 
         log_fine_tuning("🔵 Fine-tuning 訓練開始...")   
 
-        json_id = load_training_data(TRAINING_FILE_PATH)
+        load_training_data(TRAINING_FILE_PATH)
         file_id = upload_training_data()
         job_id = start_fine_tuning(file_id)
         result = check_fine_tuning_status(job_id)
